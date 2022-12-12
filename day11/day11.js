@@ -183,16 +183,10 @@ lineReader.on('close', () => {
         monkeys.forEach((monkey) => {
             monkey.test();
         });
-        if (i == 19) {
-            monkeys.forEach((monkey) => {
-                console.log(monkey.numInspect);
-            });
-        }
     }
 
     const inspectNums = monkeys.map((monkey) => monkey.numInspect);
     inspectNums.sort((a, b) => b - a);
-    console.log(inspectNums);
 
     console.log(inspectNums[0] * inspectNums[1]);
 });
